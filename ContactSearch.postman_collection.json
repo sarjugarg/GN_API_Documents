@@ -1,0 +1,3149 @@
+{
+	"info": {
+		"_postman_id": "9a516830-9b57-45e7-88d2-d80680a1df38",
+		"name": "ContactSearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TC1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=19700713",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "19700713"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=Ben&first_name_operator=like ",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Ben"
+						},
+						{
+							"key": "first_name_operator",
+							"value": "like "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2 InvalidURL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contactt/search?first_name=Ben&first_name_operator=like ",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contactt",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Ben"
+						},
+						{
+							"key": "first_name_operator",
+							"value": "like "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2 InvalidURL XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contactt/search?first_name=Ben&first_name_operator=like ",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contactt",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Ben"
+						},
+						{
+							"key": "first_name_operator",
+							"value": "like "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2 InvalidVersion",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v/contact/search?first_name=Ben&first_name_operator=like ",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Ben"
+						},
+						{
+							"key": "first_name_operator",
+							"value": "like "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2 InvalidVersion XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/1/contact/search?first_name=Ben&first_name_operator=like ",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Ben"
+						},
+						{
+							"key": "first_name_operator",
+							"value": "like "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC12",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=Ben&first_name_operator=like ",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Ben"
+						},
+						{
+							"key": "first_name_operator",
+							"value": "like "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC11",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=19700713",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "19700713"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC11 NoAuth",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=19700713",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "19700713"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC11 NoAuth XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=19700713",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "19700713"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC3",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=David&first_name_operator=like &last_name=Smith&last_name_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "David"
+						},
+						{
+							"key": "first_name_operator",
+							"value": "like "
+						},
+						{
+							"key": "last_name",
+							"value": "Smith"
+						},
+						{
+							"key": "last_name_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC4",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?fund_id=GNN&fund_id=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "GNN"
+						},
+						{
+							"key": "fund_id",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC4 NoToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?fund_id=GNN&fund_id=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "GNN"
+						},
+						{
+							"key": "fund_id",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC4 NoToken XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?fund_id=GNN&fund_id=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "GNN"
+						},
+						{
+							"key": "fund_id",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC5",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?deceased=N&email_address_name=johnd@test.com&email_address_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "deceased",
+							"value": "N"
+						},
+						{
+							"key": "email_address_name",
+							"value": "johnd@test.com"
+						},
+						{
+							"key": "email_address_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC5 IncorrectMethod",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?deceased=N&email_address_name=johnd@test.com&email_address_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "deceased",
+							"value": "N"
+						},
+						{
+							"key": "email_address_name",
+							"value": "johnd@test.com"
+						},
+						{
+							"key": "email_address_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC5 IncorrectMethod XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?deceased=N&email_address_name=johnd@test.com&email_address_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "deceased",
+							"value": "N"
+						},
+						{
+							"key": "email_address_name",
+							"value": "johnd@test.com"
+						},
+						{
+							"key": "email_address_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC6",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?last_updated=20200312&last_updated_operator=gt&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20200312"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "gt"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC6 NoToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?last_updated=20200312&last_updated_operator=gt&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20200312"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "gt"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC6 NoToken XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?last_updated=20200312&last_updated_operator=gt&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20200312"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "gt"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC7",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?fund_id=GNN&fund_id=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "GNN"
+						},
+						{
+							"key": "fund_id",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC8",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=WQEWDSSF",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "WQEWDSSF"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC9",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=-19700713",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "-19700713"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC10",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=$$%$^%",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "$$%$^%"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC13",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=David&first_name_operator=like &last_name=Smith&last_name_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "David"
+						},
+						{
+							"key": "first_name_operator",
+							"value": "like "
+						},
+						{
+							"key": "last_name",
+							"value": "Smith"
+						},
+						{
+							"key": "last_name_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC13 InvalidVersion",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/1/contact/search?first_name=David&first_name_operator=like &last_name=Smith&last_name_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "David"
+						},
+						{
+							"key": "first_name_operator",
+							"value": "like "
+						},
+						{
+							"key": "last_name",
+							"value": "Smith"
+						},
+						{
+							"key": "last_name_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC13 InvalidVersion XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/1/contact/search?first_name=David&first_name_operator=like &last_name=Smith&last_name_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "David"
+						},
+						{
+							"key": "first_name_operator",
+							"value": "like "
+						},
+						{
+							"key": "last_name",
+							"value": "Smith"
+						},
+						{
+							"key": "last_name_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC14",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?fund_id=GNN&fund_id=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "GNN"
+						},
+						{
+							"key": "fund_id",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC15",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?deceased=N&email_address_name=johnd@test.com&email_address_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "deceased",
+							"value": "N"
+						},
+						{
+							"key": "email_address_name",
+							"value": "johnd@test.com"
+						},
+						{
+							"key": "email_address_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC16",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?last_updated=20200312&last_updated_operator=gt&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20200312"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "gt"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC17",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?fund_id=GNN&fund_id=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "GNN"
+						},
+						{
+							"key": "fund_id",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC18",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=WQEWDSSF",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "WQEWDSSF"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC19",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=-19700713",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "-19700713"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC20",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=$$%$^%",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "$$%$^%"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC21",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=Ben",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Ben"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC22",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=Donald",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Donald"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC22 NoAuth XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=Donald",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Donald"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC22 NoAuth",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=Donald",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Donald"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC23",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?last_name=John",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_name",
+							"value": "John"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC24",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?last_name=Smith",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_name",
+							"value": "Smith"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC25",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?country=US",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC25 NoAuth",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?country=US",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC25 NoAuth XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?country=US",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC26",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?last_updated=20200312",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20200312"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC27",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?state=GA",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "GA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC28",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?content_type=10",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "content_type",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC29",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?zip=75201",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "75201"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC30",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?deceased=Y",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "deceased",
+							"value": "Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC30 NoToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?deceased=Y",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "deceased",
+							"value": "Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC30 NoToken XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?deceased=Y",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "deceased",
+							"value": "Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC31",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?email_address_name=johnd@test.com",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "email_address_name",
+							"value": "johnd@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC31 MethodIncorrect",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?email_address_name=johnd@test.com",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "email_address_name",
+							"value": "johnd@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC31 IncorectMethod_XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?email_address_name=johnd@test.com",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "email_address_name",
+							"value": "johnd@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC32",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=Ben",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Ben"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC33",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=Donald",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Donald"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC33 IncorrectParam XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=Donald",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Donald"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC33 IncorrectParam",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?first_name=Donald",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Donald"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC34",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?last_name=John",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_name",
+							"value": "John"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC35",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?last_name=Smith",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_name",
+							"value": "Smith"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC36",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?country=US",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC37",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?content_type=10",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "content_type",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC38",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?state=GA",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "GA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC39",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?dob=19700713",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "dob",
+							"value": "19700713"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC39 NoAuth_XML",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?country=US",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC39 NoAuth",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?country=US",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC40",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?zip=75201",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "75201"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC41",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?deceased=Y",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "deceased",
+							"value": "Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC42",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/contact/search?email_address_name=johnd@test.com",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"contact",
+						"search"
+					],
+					"query": [
+						{
+							"key": "email_address_name",
+							"value": "johnd@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

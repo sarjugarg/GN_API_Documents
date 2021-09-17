@@ -1,0 +1,878 @@
+{
+	"info": {
+		"_postman_id": "d49c3b46-865d-4ee3-9e83-5d6e3baa4ac9",
+		"name": "Fund_ID",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login_Json_Valid",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"kgibran\",\r\n    \"client_id\" : \"public\",\r\n    \"password\":\"4a7699f671d099db\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout_Valid Copy",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/auth/logout",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fund_NoToken_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fund_NoToken_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/Landwdjqwoij",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"Landwdjqwoij"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InvalidVersion_XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v2/fund/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v2",
+						"fund",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InvalidVersion_JSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v2/fund/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v2",
+						"fund",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid_JSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid_XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IncorrectMethod_JSON",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IncorrectMethod_xml",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_NoAuth_JSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inValid_NoAuth_XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_Func_JSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fundsID/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fundsID",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_Func_XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fundsID/Land",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fundsID",
+						"Land"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_JSON_Zero ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/0",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_XML_Zero ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/0",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_JSON_Long_Length_ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/137734730297",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"137734730297"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_XML_Long_Length_ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/137734730297590475094379050943590",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"137734730297590475094379050943590"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_JSON_Negative_ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/-8989",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"-8989"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_XML_Negative_ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/-57",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"-57"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_ID_XML_SpecialCharacters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/#$%$#@^%",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						""
+					],
+					"hash": "$%$#@^%"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_ID_JSON_SpecialCharacters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/@#$#@$#@",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"@"
+					],
+					"hash": "$#@$#@"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_ID_JSON_Alphabets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/EWRETRETREFCFD",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"EWRETRETREFCFD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InValid_ID_XML_Alphabets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/fund/ERFDGSFDGWQR",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"fund",
+						"ERFDGSFDGWQR"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

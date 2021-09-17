@@ -1,0 +1,4826 @@
+{
+	"info": {
+		"_postman_id": "69411c8f-122b-495b-b38d-ef9baf0e617d",
+		"name": "RecommendationSearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TC1_Recommendation_JSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2_Recommendation_XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC3_Recommendation_OrdrDateDescJSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bstart_date%5D=desc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bstart_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC4_Recommendation_OrdrDateDescXML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bstart_date%5D=desc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bstart_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC5_Recommendation_OrdrDateAscJSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bstart_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bstart_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC6_Recommendation_OrdrDateAscXML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bstart_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bstart_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC7_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bstart_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bstart_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC8_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC9_Recommendation json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bstart_date%5D=asc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bstart_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC10_Recommendation xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Noauth1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Methodincorrect1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidVersion1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v2/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v2",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidParam1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fundid=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fundid",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Invalidtoken1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation_xml_InvalidURL1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendatiomn/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendatiomn",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Noauth1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2&fund_id=ANDERJOH",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidVersion1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v2/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v2",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidParam1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fundid=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fundid",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Invalidtoken1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v2/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v2",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidURL1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendatione/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendatione",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Methodincorrect1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?fund_id=ANDERJOH&fund_id_operator=like&order_by%5Bapproved_date%5D=asc&page_size=3&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fund_id",
+							"value": "ANDERJOH"
+						},
+						{
+							"key": "fund_id_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Noauth2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidVersion2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v2/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v2",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidParam2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?cotact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "cotact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Invalidtoken2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v2/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v2",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidURL2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommenddation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommenddation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Methodincorrect2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?organization_name=University&organization_name_operator=like&order_by%5Blast_updated%5D=desc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "organization_name",
+							"value": "University"
+						},
+						{
+							"key": "organization_name_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Blast_updated%5D",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Noauth2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidToken2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidVersion2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidParam2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?contact_d=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_d",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidURL2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recomendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recomendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Methodincorrect2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?organization_name=University&organization_name_operator=like&order_by%5Blast_updated%5D=desc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "organization_name",
+							"value": "University"
+						},
+						{
+							"key": "organization_name_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Blast_updated%5D",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Noauth3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Invalidtoken3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidVersion3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidParam3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?staus=pending&status_operator=like&order_by%5Bdate_submitted%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "staus",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidURL3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Methodincorrect3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?date_submitted=20210208&date_submitted_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "date_submitted",
+							"value": "20210208"
+						},
+						{
+							"key": "date_submitted_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Noauth3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidVersion3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidParam3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Invalidtoken3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidURL3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommndation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=desc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommndation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Methodincorrect3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?date_submitted=20210208&date_submitted_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "date_submitted",
+							"value": "20210208"
+						},
+						{
+							"key": "date_submitted_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Noauth4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?last_updated=20210208&last_updated_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20210208"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidVersion4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/1/recommendation/search?last_updated=20210208&last_updated_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20210208"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidParam4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?lastupdated=20210208&last_updated_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "lastupdated",
+							"value": "20210208"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Invalidtoken4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/1/recommendation/search?last_updated=20210208&last_updated_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20210208"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidURL4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/version1/recommendation/search?status=approved&organization_zip=75201&last_updated=20200824",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"version1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "approved"
+						},
+						{
+							"key": "organization_zip",
+							"value": "75201"
+						},
+						{
+							"key": "last_updated",
+							"value": "20200824"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Methodincorrect4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=approved&organization_zip=75201&is_approved=Y",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "approved"
+						},
+						{
+							"key": "organization_zip",
+							"value": "75201"
+						},
+						{
+							"key": "is_approved",
+							"value": "Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Noauth4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?last_updated=20210208&last_updated_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20210208"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidVersion4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/1/recommendation/search?last_updated=20210208&last_updated_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20210208"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidParam4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?lastpdated=20210208&last_updated_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "lastpdated",
+							"value": "20210208"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Invalidtoken4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/1/recommendation/search?last_updated=20210208&last_updated_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20210208"
+						},
+						{
+							"key": "last_updated_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidURL4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/version1/recommendation/search?status=approved&organization_zip=75201&last_updated=20200824",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"version1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "approved"
+						},
+						{
+							"key": "organization_zip",
+							"value": "75201"
+						},
+						{
+							"key": "last_updated",
+							"value": "20200824"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Methodincorrect4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=approved&organization_zip=75201&is_approved=Y",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "approved"
+						},
+						{
+							"key": "organization_zip",
+							"value": "75201"
+						},
+						{
+							"key": "is_approved",
+							"value": "Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Noauth5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidVersion5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendationns/search?organization_id=597",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendationns",
+						"search"
+					],
+					"query": [
+						{
+							"key": "organization_id",
+							"value": "597"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidToken5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?org_status=approved&organization_zip=75201&is_approved=Y",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "org_status",
+							"value": "approved"
+						},
+						{
+							"key": "organization_zip",
+							"value": "75201"
+						},
+						{
+							"key": "is_approved",
+							"value": "Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidToken6",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?organization_ein=1930302&oraganization_ein_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "organization_ein",
+							"value": "1930302"
+						},
+						{
+							"key": "oraganization_ein_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_InvalidURL5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendationns/search?organization_id=597",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendationns",
+						"search"
+					],
+					"query": [
+						{
+							"key": "organization_id",
+							"value": "597"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation xml_Methodincorrect5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Noauth5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidVersion5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidToken5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?org_status=approved&organization_zip=75201&is_approved=Y",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "org_status",
+							"value": "approved"
+						},
+						{
+							"key": "organization_zip",
+							"value": "75201"
+						},
+						{
+							"key": "is_approved",
+							"value": "Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidToken6",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?organization_ein=1930302&oraganization_ein_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "organization_ein",
+							"value": "1930302"
+						},
+						{
+							"key": "oraganization_ein_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_InvalidURL5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendation json_Methodincorrect5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC11_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?name=University&name_operator=like&order_by%5Bend_date%5D=desc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bend_date%5D",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC12_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=desc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "desc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC13_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?state=Texas&state_operator=like&order_by%5Bend_date%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "Texas"
+						},
+						{
+							"key": "state_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bend_date%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC14_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?organization_state=Texas&organization_state_operator=like&order_by%5Blast_updated%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "organization_state",
+							"value": "Texas"
+						},
+						{
+							"key": "organization_state_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Blast_updated%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC15_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC16_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC17_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=desc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC18_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending&status_operator=like&order_by%5Bdate_submitted%5D=desc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC19_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?start_date=20200208&start_date_operator=gte",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "20200208"
+						},
+						{
+							"key": "start_date_operator",
+							"value": "gte"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC20_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?date_submitted=20210208&date_submitted_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "date_submitted",
+							"value": "20210208"
+						},
+						{
+							"key": "date_submitted_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC21_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?end_date=20210208&end_date_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "end_date",
+							"value": "20210208"
+						},
+						{
+							"key": "end_date_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC22_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?date_submitted=20210208&date_submitted_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "date_submitted",
+							"value": "20210208"
+						},
+						{
+							"key": "date_submitted_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC23_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=approved&zip=75201&end_date=20200824",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "approved"
+						},
+						{
+							"key": "zip",
+							"value": "75201"
+						},
+						{
+							"key": "end_date",
+							"value": "20200824"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC24_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=approved&organization_zip=75201&last_updated=20200824",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "approved"
+						},
+						{
+							"key": "organization_zip",
+							"value": "75201"
+						},
+						{
+							"key": "last_updated",
+							"value": "20200824"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC25_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=approved&is_approved=Y",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "approved"
+						},
+						{
+							"key": "zip",
+							"value": "75201",
+							"disabled": true
+						},
+						{
+							"key": "is_approved",
+							"value": "Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC26_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=approved&organization_zip=75201&is_approved=Y",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "approved"
+						},
+						{
+							"key": "organization_zip",
+							"value": "75201"
+						},
+						{
+							"key": "is_approved",
+							"value": "Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC27_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?organization_id=597",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "organization_id",
+							"value": "597"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC28_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?organization_id=597",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "organization_id",
+							"value": "597"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC29_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?ein=1930302&ein_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "1930302"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC30_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?organization_ein=1930302&oraganization_ein_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "organization_ein",
+							"value": "1930302"
+						},
+						{
+							"key": "oraganization_ein_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC31_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending*status_operator=like&order_by%5Bstart_date%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending*status_operator=like"
+						},
+						{
+							"key": "order_by%5Bstart_date%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC32_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?status=pending*status_operator=like&order_by%5Bdate_submitted%5D=asc",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending*status_operator=like"
+						},
+						{
+							"key": "order_by%5Bdate_submitted%5D",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC33_Recommendation_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?contact_id=86&contact_id_operator=eq&order_by%5Bapproved_date%5D=asc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "contact_id",
+							"value": "86"
+						},
+						{
+							"key": "contact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC34_Recommendation_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?condtact_id=86&consdtact_id_operator=eq&order_by%5Bapproved_date%5D=asc&page_size=30&page=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "condtact_id",
+							"value": "86"
+						},
+						{
+							"key": "consdtact_id_operator",
+							"value": "eq"
+						},
+						{
+							"key": "order_by%5Bapproved_date%5D",
+							"value": "asc"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC35_Recommendation_searchall_JSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?start_date=20210208&start_date_operator=gt&start_date=20210408&start_date_operator=lte",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "20210208"
+						},
+						{
+							"key": "start_date_operator",
+							"value": "gt"
+						},
+						{
+							"key": "start_date",
+							"value": "20210408"
+						},
+						{
+							"key": "start_date_operator",
+							"value": "lte"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC36_Recommendation_searchall_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/recommendation/search?",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"recommendation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

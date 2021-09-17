@@ -1,0 +1,4808 @@
+{
+	"info": {
+		"_postman_id": "4f1ce560-0822-4a51-a386-b9e21e3dcf8a",
+		"name": "Organization_Search",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Org_Login_Json_Valid",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"kgibran\",\r\n    \"client_id\" : \"public\",\r\n    \"password\":\"4a7699f671d099db\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC1_ein_like_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=25&ein_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "25"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC41_ein_like_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=25&ein_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "25"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						},
+						{
+							"key": "allow_recommendation",
+							"value": "Y",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2_ein2_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=1159753&ein_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC5_NoAuth_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?org_name=University&org_name_operator=like&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "org_name",
+							"value": "University"
+						},
+						{
+							"key": "org_name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC5_NoAuth_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?org_name=University&org_name_operator=like&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "org_name",
+							"value": "University"
+						},
+						{
+							"key": "org_name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC9_NoAuth_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?org_name=University&org_name_operator=eq&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "org_name",
+							"value": "University"
+						},
+						{
+							"key": "org_name_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC9_NoAuth_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?org_name=University&org_name_operator=eq&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "org_name",
+							"value": "University"
+						},
+						{
+							"key": "org_name_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC17_NoAuth_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=like&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC17_NoAuth_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=like&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC21_NoAuth_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=eq&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC21_NoAuth_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=eq&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC32_NoAuth_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?reviewed=Y&visible=Y&state=GA&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "reviewed",
+							"value": "Y"
+						},
+						{
+							"key": "visible",
+							"value": "Y"
+						},
+						{
+							"key": "state",
+							"value": "GA"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC32_NoAuth_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?reviewed=Y&visible=Y&state=GA&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "reviewed",
+							"value": "Y"
+						},
+						{
+							"key": "visible",
+							"value": "Y"
+						},
+						{
+							"key": "state",
+							"value": "GA"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC36_NoAuth_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?allow_recommendation=Y&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "allow_recommendation",
+							"value": "Y"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC36_NoAuth_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?allow_recommendation=Y&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "allow_recommendation",
+							"value": "Y"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC42_ein2_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=1159753&ein_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC3_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC43_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?zip=30237&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "30237"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC4_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC44_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC5_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&page=1&page_size=25\n",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC45_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC6_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&page=1&page_size=55",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC46_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&page=1&page_size=55",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC7_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC47_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC8_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=Unive&name_operator=like&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Unive"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC48_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=eq&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC9_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=eq&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC49_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=eq&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC10_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=eq&page=1&page_size=55",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC50_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=eq&page=1&page_size=55",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC11_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=neq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "neq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC51_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=neq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "neq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC12_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=neq&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC52_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=neq&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC13_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=neq&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC53_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=neq&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC14_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=neq&page=1&page_size=35",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "35"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC54_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=neq&page=1&page_size=35",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "35"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC15_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=9753&ein_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "9753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC55_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=like",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC16_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=like&page_size=2&page=1",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC56_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=like&page_size=2&page=1",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC17_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=like&page_size=25&page=1",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC57_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=like&page_size=25&page=1",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC18_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159&ein_operator=like&page=1&page_size=55",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC58_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=like&page=1&page_size=55",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC19_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC59_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC20_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=eq&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC60_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=eq&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC21_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=eq&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC61_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=eq&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC22_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=eq&page=1&page_size=55",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC62_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=eq&page=1&page_size=55",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC23_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=neq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "neq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC63_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=neq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "neq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC24_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=neq&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC64_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=neq&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC25_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=neq&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC65_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=neq&page=1&page_size=25",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC26_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=neq&page=1&page_size=55",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC66_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=74-1159753&ein_operator=neq&page=1&page_size=55",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "74-1159753"
+						},
+						{
+							"key": "ein_operator",
+							"value": "neq"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC27_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&date_reviewed=20200513&date_reviewed_operator=gt&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "date_reviewed",
+							"value": "20200513"
+						},
+						{
+							"key": "date_reviewed_operator",
+							"value": "gt"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC67_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&date_reviewed=20200513&date_reviewed_operator=gt&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "date_reviewed",
+							"value": "20200513"
+						},
+						{
+							"key": "date_reviewed_operator",
+							"value": "gt"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC28_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&date_reviewed=20200513&date_reviewed_operator=gt&page=1&page_size=3",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "date_reviewed",
+							"value": "20200513"
+						},
+						{
+							"key": "date_reviewed_operator",
+							"value": "gt"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC68_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&date_reviewed=20200513&date_reviewed_operator=gt&page=1&page_size=3",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "date_reviewed",
+							"value": "20200513"
+						},
+						{
+							"key": "date_reviewed_operator",
+							"value": "gt"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC29_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?reviewed=Y&status=Active&city=San Antonio&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "reviewed",
+							"value": "Y"
+						},
+						{
+							"key": "status",
+							"value": "Active"
+						},
+						{
+							"key": "city",
+							"value": "San Antonio"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC69_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?reviewed=Y&status=Active&city=San Antonio&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "reviewed",
+							"value": "Y"
+						},
+						{
+							"key": "status",
+							"value": "Active"
+						},
+						{
+							"key": "city",
+							"value": "San Antonio"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC30_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?reviewed=Y&status=Active&city=San Antonio&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "reviewed",
+							"value": "Y"
+						},
+						{
+							"key": "status",
+							"value": "Active"
+						},
+						{
+							"key": "city",
+							"value": "San Antonio"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC70_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?reviewed=Y&status=Active&city=San Antonio&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "reviewed",
+							"value": "Y"
+						},
+						{
+							"key": "status",
+							"value": "Active"
+						},
+						{
+							"key": "city",
+							"value": "San Antonio"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC31_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=30389223&ein_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "30389223"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC71_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?ein=30389223&ein_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "ein",
+							"value": "30389223"
+						},
+						{
+							"key": "ein_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC32_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?reviewed=Y&visible=Y&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "reviewed",
+							"value": "Y"
+						},
+						{
+							"key": "visible",
+							"value": "Y"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC72_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?reviewed=Y&visible=Y&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "reviewed",
+							"value": "Y"
+						},
+						{
+							"key": "visible",
+							"value": "Y"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC33_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?zip=30237&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "30237"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC73_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?zip=30237&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "30237"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC34_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC74_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?name=University&name_operator=like&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "University"
+						},
+						{
+							"key": "name_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC35_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?last_updated=20200312&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20200312"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC75_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?last_updated=20200312&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "last_updated",
+							"value": "20200312"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC36_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?allow_recommendation=Y&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "allow_recommendation",
+							"value": "Y"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC76_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?allow_recommendation=Y&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "allow_recommendation",
+							"value": "Y"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC37_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?allow_recommendation=Y&status=Active&status_operator=like&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "allow_recommendation",
+							"value": "Y"
+						},
+						{
+							"key": "status",
+							"value": "Active"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC77_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?allow_recommendation=Y&status=Active&status_operator=like&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "allow_recommendation",
+							"value": "Y"
+						},
+						{
+							"key": "status",
+							"value": "Active"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC38_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?allow_recommendation=Y&status=Active&status_operator=like&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "allow_recommendation",
+							"value": "Y"
+						},
+						{
+							"key": "status",
+							"value": "Active"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC78_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?allow_recommendation=Y&status=Active&status_operator=like&page=1&page_size=2",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "allow_recommendation",
+							"value": "Y"
+						},
+						{
+							"key": "status",
+							"value": "Active"
+						},
+						{
+							"key": "status_operator",
+							"value": "like"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC39_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?phone_number=2771266&phone_number_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "phone_number",
+							"value": "2771266"
+						},
+						{
+							"key": "phone_number_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC79_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?phone_number=2771266&phone_number_operator=eq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "phone_number",
+							"value": "2771266"
+						},
+						{
+							"key": "phone_number_operator",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC40_name_json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?phone_number=2771266&phone_number_operator=neq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "phone_number",
+							"value": "2771266"
+						},
+						{
+							"key": "phone_number_operator",
+							"value": "neq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC80_name_xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://34.68.9.179:8091/v1/organization/search?phone_number=2771266&phone_number_operator=neq",
+					"protocol": "http",
+					"host": [
+						"34",
+						"68",
+						"9",
+						"179"
+					],
+					"port": "8091",
+					"path": [
+						"v1",
+						"organization",
+						"search"
+					],
+					"query": [
+						{
+							"key": "phone_number",
+							"value": "2771266"
+						},
+						{
+							"key": "phone_number_operator",
+							"value": "neq"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
